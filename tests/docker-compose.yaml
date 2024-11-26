@@ -1,0 +1,8 @@
+services:
+  mock_api:
+    image: busybox:latest
+    volumes:
+      - ./data:/var/www/
+    ports:
+      - "8084:80"
+    command: httpd -f -h /var/www/
